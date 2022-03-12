@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body" style="padding:10px">
     <div class="container" style="padding:0px">
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-4">
           <%= image_tag("profile.jpg", width: "140") %>
         </div>
@@ -10,6 +10,13 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <strong>mail:</strong> <%= user.email %> |
+          <strong>call:</strong> : <%= user.phone_number %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

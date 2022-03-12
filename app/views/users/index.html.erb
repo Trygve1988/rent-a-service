@@ -1,7 +1,7 @@
-<h1>Users#index</h1>
-
 <% @users.each do |user| %>
-  <%= user.email %>
+  <%= link_to user_path user do %>
+    <%= render "user_card", user: user %>
+  <% end %>
 <% end %>
 <br><br>
 
