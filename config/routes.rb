@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sheep
   resources :skills
   resources :horses
   resources :profiles
