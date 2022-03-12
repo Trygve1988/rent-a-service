@@ -28,9 +28,6 @@
         </div>
         <div id="center-col" class="col">
           <div id="yield-container" class="container">
-            <% if user_signed_in? %>
-              hi <%= current_user.email %>
-            <% end %><br><br>
             <%= yield %>
           </div>
         </div>
