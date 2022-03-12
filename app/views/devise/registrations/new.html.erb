@@ -7,17 +7,23 @@
 
   <div class="mb-4">
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", value: "Per" %>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", value: "Knut" %>
   </div>
 
   <div class="mb-4">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control", value: "Persen" %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control", value: "Knudsen" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :about_me %><br />
+    <%= f.text_area :about_me, autofocus: true, autocomplete: "about_me", class: "form-control",
+                    value: "Jeg er flink til hagearbeid. Jeg kan klippe plen, trimme busker og luke i bedet ditt", style: "height: 86px" %>
   </div>
 
   <div class="mb-4">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: "per@gmail.com" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: "knut@gmail.com" %>
   </div>
 
   <div class="mb-4">
