@@ -1,0 +1,10 @@
+
+<h1>My skills</h1>
+<br>
+<div id="user_skills">
+  <% @user_skills.each do |user_skill| %>
+    <%= render user_skill %>
+  <% end %>
+</div>
+
+<%= link_to "Add new skill", new_user_skill_path %>

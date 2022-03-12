@@ -1,0 +1,25 @@
+<%= form_with(model: user_skill) do |form| %>
+  <% if user_skill.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user_skill.errors.count, "error") %> prohibited this user_skill from being saved:</h2>
+
+      <ul>
+        <% user_skill.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.number_field :user_id, id: :story_user_id, value: current_user.id, type: :hidden %>
+  </div>
+
+  <div class="mb-1">
+    <%= form.collection_select :skill_id, Skill.order(:name),:id,:title, include_blank: true, class: "form-select" %>
+  </div>
+
+  <div>
+    <%= form.submit "Add new skill" %>
+  </div>
+<% end %>

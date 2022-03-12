@@ -1,1 +1,21 @@
-<%= render "profile_card", user: @user %>
+<div class="mb-2">
+  <%= render "profile_card", user: @user %>
+</div>
+
+<div class="container" style="padding:0px">
+  <div class="row">
+
+    <div class="col">
+      <div class="mb">
+        <span class="material-icons">mail</span> <%= mail_to @user.email %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="mb">
+        <span class="material-icons">phone</span> <%= phone_to @user.phone_number %>
+      </div>
+    </div>
+
+  </div>
+</div>
