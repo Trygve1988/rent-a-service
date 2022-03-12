@@ -1,3 +1,9 @@
+<%= form_with(model: @skill) do |form| %>
+  <div class="mb-1">
+    <%= form.collection_select :skill_id, Skill.order(:name),:id,:title, include_blank: true, class: "form-select" %>
+  </div>
+<% end %>
+
 <% @users.each do |user| %>
   <%= link_to profile_path user do %>
     <%= render "profile_card", user: user %>
