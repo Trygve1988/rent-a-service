@@ -1,18 +1,27 @@
-<%= form_with(model: @skill) do |form| %>
-  <div class="mb-1">
-    <%= form.collection_select :skill_id, Skill.order(:name),:id,:title, include_blank: true, class: "form-select" %>
-    <%= form.submit "Find" %>
-  </div>
-<% end %>
+<%= render 'searches/form' %>
+
+<%= skill_id = session[:current_skill_id] %>
+<%= session[:current_skill_title] %>
 
 <% @users.each do |user| %>
-  <%= link_to profile_path user do %>
-    <%= render "profile_card", user: user %>
+  <% if session[:current_skill_id] %>
+    <% if user.hasSkill(skill_id) %>
+      <%= link_to profile_path user do %>
+        <%= render "profile_card", user: user %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= link_to profile_path user do %>
+      <%= render "profile_card", user: user %>
+    <% end %>
   <% end %>
 <% end %>
 <br><br>
+
+<% session.clear %>
 
 <% if user_signed_in? %>
   hi <%= current_user.first_name %>
 <% end %>
 <br><br>
+

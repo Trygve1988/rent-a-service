@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
 
   def index
     @users = User.all
-    @skills = Skill.all
+    @search = Search.new
   end
 
   # GET /horses/1 or /horses/1.json

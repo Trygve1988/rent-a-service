@@ -5,11 +5,19 @@
         <span class="material-icons">home</span>
       <% end %>
     </div>
+
     <div class="col p-1">
-      <%= link_to user_skills_path, class:"p-3 nav-icon" do %>
-        <span class="material-icons">star</span>
+      <% if current_user %>
+        <%= link_to user_skills_path, class:"p-3 nav-icon" do %>
+          <span class="material-icons">star</span>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class:"p-3 nav-icon" do %>
+          <span class="material-icons">star</span>
+        <% end %>
       <% end %>
     </div>
+
     <div class="col p-1">
       <%= link_to edit_user_registration_path, class:"p-3 nav-icon" do %>
         <span class="material-icons">person</span>
