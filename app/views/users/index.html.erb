@@ -1,0 +1,12 @@
+<h1>Users#index</h1>
+
+<% @users.each do |user| %>
+  <%= user.email %>
+<% end %>
+<br><br>
+
+<% if user_signed_in? %>
+  hi <%= current_user.attributes %>
+<% end %>
+
+

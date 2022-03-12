@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :horses
   devise_for :users, controllers: { registrations: "registrations" }
 
   # Defines the root path route ("/")
-  root "home#index"
+  root "users#index"
 end
