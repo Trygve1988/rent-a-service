@@ -1,6 +1,7 @@
 <%= form_with(model: @skill) do |form| %>
   <div class="mb-1">
     <%= form.collection_select :skill_id, Skill.order(:name),:id,:title, include_blank: true, class: "form-select" %>
+    <%= form.submit "Find" %>
   </div>
 <% end %>
 
