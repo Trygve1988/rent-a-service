@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light bg-light">
+<nav class="navbar navbar-expand navbar-light" style="background-color: #B8DEF4">
   <%= link_to "Rent-a-Service", root_path , class: "navbar-brand" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
     <ul class="navbar-nav">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= button_to "sign out", destroy_user_session_path, method: :delete , class: "nav-link" %>
+          <%= button_to "sign out", destroy_user_session_path, method: :delete , class: "btn btn-secondary" %>
         </li>
       <% else %>
         <li class="nav-item">

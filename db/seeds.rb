@@ -26,7 +26,7 @@ User.create(id: 4, first_name: "Lars", last_name: "Dahl",
             email: "lars@gmail.com",
             password: "123456", password_confirmation: "123456", phone_number: "44422333")
 User.create(id: 5, first_name: "Kristine", last_name: "Sjøen",
-            about_me: "Jeg er flink med barn. Jeg har 5 søsker så jeg har mye erfaring",
+            about_me: "Jeg er flink med barn. Jeg har 5 søsken så jeg har mye erfaring",
             email: "kristine@gmail.com",
             password: "123456", password_confirmation: "123456", phone_number: "5552333")
 
