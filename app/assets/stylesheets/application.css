@@ -17,6 +17,7 @@
 .card-title {
     font-size: 0.9em;
     font-weight: 550;
+    color:black;
 }
 @media only screen and (min-width: 400px) {
     .card-title {
@@ -24,11 +25,12 @@
     }
 }
 
-p {
+.card-text {
     font-size: 0.8em;
+    color:black;
 }
 @media only screen and (min-width: 400px) {
-    p {
+    .card-text{
         font-size: 1em;
     }
 }
