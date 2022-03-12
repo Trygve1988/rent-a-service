@@ -6,6 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
 
       t.string "first_name", default: "", null: false
       t.string "last_name", default: "", null: false
+      t.string "about_me", default: ""
       t.string "phone_number", default: ""
 
       ## Database authenticatable
