@@ -6,8 +6,18 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="mb-4">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", value: "Per" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control", value: "Persen" %>
+  </div>
+
+  <div class="mb-4">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", value: "per@gmail.com" %>
   </div>
 
   <div class="mb-4">
@@ -15,12 +25,17 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control", value: "123456" %>
   </div>
 
-  <div class="mb-5">
+  <div class="mb-4">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", value: "123456" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", class: "form-control", value: "2233344" %>
   </div>
 
   <div class="mb-5">

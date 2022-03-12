@@ -1,4 +1,4 @@
 <h1>Home#index</h1>
 <% if user_signed_in? %>
-  hi <%= current_user.email %>
+  hi <%= current_user.attributes %>
 <% end %>
