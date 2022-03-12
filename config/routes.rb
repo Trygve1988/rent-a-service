@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
   resources :searches
   resources :user_skills
   resources :sheep

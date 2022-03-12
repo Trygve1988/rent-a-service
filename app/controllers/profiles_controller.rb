@@ -8,8 +8,6 @@ class ProfilesController < ApplicationController
 
   # GET /horses/1 or /horses/1.json
   def show
-    @comment = Comment.new
-    @comments = Comment.all
   end
 
   private

@@ -1,8 +1,0 @@
-<%= form_with(model: @comment) do |form| %>
-
-  <div class="input-group mb-3">
-    <%= form.text_field :text %>
-    <%= form.number_field :user_id, id: :user_id, value: @user.id, type: :hidden %>
-    <%= form.submit %>
-  </div>
-<% end %>
