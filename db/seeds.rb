@@ -14,3 +14,13 @@ User.create(first_name: "Ole", last_name: "Olesen",
             about_me: "Jeg er bilmekanikker og jeg kan reperaner bilen din. Jeg tar 200kr i timen.",
             email: "ole@gmail.com",
             password: "123456", password_confirmation: "123456", phone_number: "22222333")
+
+Skill.delete_all
+
+Skill.create(title: "Gardening")
+Skill.create(title: "Lawn mowing")
+Skill.create(title: "Childcare")
+Skill.create(title: "Car rapair")
+Skill.create(title: "Cleaning")
+Skill.create(title: "Painting")
+Skill.create(title: "Electrical work")

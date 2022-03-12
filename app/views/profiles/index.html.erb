@@ -9,4 +9,7 @@
   hi <%= current_user.first_name %>
 <% end %>
 
-
+<% @skills = Skill.all %>
+<% @skills.each do |skill| %>
+  <%= skill.title %><br>
+<% end %>
