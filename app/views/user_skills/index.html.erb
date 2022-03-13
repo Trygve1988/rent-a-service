@@ -1,6 +1,10 @@
 
 <h1>My skills</h1>
 <br>
+
+<%= render "form", user_skill: @user_skill %>
+<br>
+
 <div id="user_skills">
   <% if @user_skills %>
     <% @user_skills.each do |user_skill| %>
@@ -8,5 +12,3 @@
     <% end %>
   <% end %>
 </div>
-
-<%= link_to "Add new skill", new_user_skill_path %>

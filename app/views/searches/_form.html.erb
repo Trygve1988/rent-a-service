@@ -1,7 +1,8 @@
 <%= form_with(model: @search) do |form| %>
-  <div class="mb-1">
-    <%= form.collection_select :skill_id, Skill.order(:name),:id,:title, include_blank: true, class: "form-select" %>
-    <%= form.submit "Find" %>
+  <div class="input-group mb-3">
+    <%= form.number_field :user_id, id: :story_user_id, value: current_user.id, type: :hidden %>
+    <%= form.collection_select :skill_id, Skill.all, :id, :title, {}, { class: "form-select" } %>
+    <%= form.submit "Search", class: "btn btn-primary"%>
   </div>
 <% end %>
 

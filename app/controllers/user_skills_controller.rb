@@ -4,6 +4,7 @@ class UserSkillsController < ApplicationController
   # GET /user_skills or /user_skills.json
   def index
     @user_skills = UserSkill.where(user_id: current_user.id)
+    @user_skill = UserSkill.new
   end
 
   # GET /user_skills/1 or /user_skills/1.json
@@ -22,6 +23,7 @@ class UserSkillsController < ApplicationController
 
   # POST /user_skills or /user_skills.json
   def create
+    puts "AAAAAAAAAAAa user_skill_params #{user_skill_params} "
     @user_skill = UserSkill.new(user_skill_params)
 
     respond_to do |format|
