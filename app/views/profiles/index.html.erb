@@ -1,8 +1,8 @@
+
 <%= form_with url: test_profiles_path, method: :post do |form|%>
   <div class="input-group mb-3">
-    <%= form.collection_select :skill_id, Skill.all, :id, :title, {},
-    { class: "form-select", onchangevalue: "this.form.requestSubmit" } %>
-    <%= form.submit "Search", class: "btn btn-primary"%>
+    <%= form.collection_select :skill_id, Skill.all, :id, :title, {}, { class: "form-select" } %>
+    <%= form.submit "Search", class: "btn btn-primary", style: "width:100px" %>
   </div>
 <% end %>
 

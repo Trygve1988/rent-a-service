@@ -12,9 +12,11 @@ class ProfilesController < ApplicationController
   def test
     id = params[:skill_id].to_i
     @users = Skill.find(id).users
-    render turbo_stream: turbo_stream.update('users',
-                                             partial: 'profiles/search_result',
-                                             locals: {users: @users})
+    render turbo_stream: turbo_stream.update(
+      'users',
+      partial: 'profiles/search_result',
+      locals: {users: @users}
+    )
   end
 end
 
