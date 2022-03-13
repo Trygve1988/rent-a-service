@@ -1,6 +1,0 @@
-<%= form_with(model: @search) do |form| %>
-  <div class="input-group mb-3">
-    <%= form.collection_select :skill_id, Skill.all, :id, :title, {}, { class: "form-select" } %>
-    <%= form.submit "Search", class: "btn btn-primary"%>
-  </div>
-<% end %>

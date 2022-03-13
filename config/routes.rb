@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  resources :searches
   resources :user_skills
 
   resources :profiles do
-    member do
-      post :search
+    collection do
+      post :test
     end
   end
 
