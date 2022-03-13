@@ -3,10 +3,11 @@ class SearchesController < ApplicationController
   # POST /searches or /searches.json
   def create
     id = params[:search][:skill_id].to_i
-    @skill = Skill.find(id)
-    session[:current_skill_id] = @skill.id
-    session[:current_skill_title] = @skill.title
-    redirect_to root_path
+    @users = Skill.find(id).users
+    render turbo_stream: turbo_stream.update(@users,
+                                             partial: "profiles/profile_cards",
+                                             locals: {users: @users})
+
   end
 
 end

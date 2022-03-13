@@ -3,11 +3,11 @@
 
 <%= render 'searches/form' %>
 
-<% @users.each do |user| %>
-  <%= link_to profile_path user do %>
+<div id="users">
+  <% @users.each do |user| %>
     <%= render "profile_card", user: user %>
   <% end %>
-<% end %>
+</div>
 <br><br>
 
 <% if user_signed_in? %>

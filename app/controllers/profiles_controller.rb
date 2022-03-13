@@ -1,12 +1,7 @@
 class ProfilesController < ApplicationController
 
   def index
-    if session[:current_skill_id]
-      id = session[:current_skill_id]
-      @users = Skill.find(id).users
-    else
-      @users = User.all
-    end
+    @users = User.all
     @search = Search.new
   end
 
