@@ -2,7 +2,6 @@ class ProfilesController < ApplicationController
 
   def index
     @users = User.all
-    @search = Search.new
   end
 
   def show
@@ -19,4 +18,3 @@ class ProfilesController < ApplicationController
     )
   end
 end
-
