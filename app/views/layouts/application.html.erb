@@ -19,8 +19,12 @@
   <body>
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/bottom_navbar' %>
-
+    <% if user_signed_in? %>
+      hi <%= current_user.first_name %> -
+    <% end %>
+    <%= Time.zone.now.strftime("%H:%M:%S") %>
     <br>
+
     <div id="main-container" class="container mb-5 mb-lg-0" >
       <div id="main-row" class="row">
         <div id="left-col" class="col-0 col-md-2 p-0 m-0">
