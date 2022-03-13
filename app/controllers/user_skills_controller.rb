@@ -7,46 +7,20 @@ class UserSkillsController < ApplicationController
     @user_skill = UserSkill.new
   end
 
-  # GET /user_skills/1 or /user_skills/1.json
-  def show
-  end
-
   # GET /user_skills/new
   def new
     @skill_options = Skill.all
     @user_skill = UserSkill.new
   end
 
-  # GET /user_skills/1/edit
-  def edit
-  end
-
   # POST /user_skills or /user_skills.json
   def create
-    puts "AAAAAAAAAAAa user_skill_params #{user_skill_params} "
     @user_skill = UserSkill.new(user_skill_params)
 
-    respond_to do |format|
-      if @user_skill.save
-        format.html { redirect_to user_skills_url, notice: "User skill was successfully created." }
-        format.json { render :show, status: :created, location: @user_skill }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user_skill.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /user_skills/1 or /user_skills/1.json
-  def update
-    respond_to do |format|
-      if @user_skill.update(user_skill_params)
-        format.html { redirect_to user_skill_url(@user_skill), notice: "User skill was successfully updated." }
-        format.json { render :show, status: :ok, location: @user_skill }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user_skill.errors, status: :unprocessable_entity }
-      end
+    if @user_skill.save
+      redirect_to user_skills_url, notice: "User skill was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

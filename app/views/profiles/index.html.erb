@@ -1,29 +1,16 @@
+<%= Time.zone.now.strftime("%H:%M:%S") %>
+<br>
+
 <%= render 'searches/form' %>
 
-<%= skill_id = session[:current_skill_id] %>
-<%= session[:current_skill_title] %>
-
 <% @users.each do |user| %>
-  <% if session[:current_skill_id] %>
-    <% if user.hasSkill(skill_id) %>
-      <%= link_to profile_path user do %>
-        <%= render "profile_card", user: user %>
-      <% end %>
-    <% end %>
-  <% else %>
-    <%= link_to profile_path user do %>
-      <%= render "profile_card", user: user %>
-    <% end %>
+  <%= link_to profile_path user do %>
+    <%= render "profile_card", user: user %>
   <% end %>
 <% end %>
 <br><br>
-
-<% if session[:current_skill_id] %>
-  <% session[:current_skill_id] = nil %>
-<% end %>
 
 <% if user_signed_in? %>
   hi <%= current_user.first_name %>
 <% end %>
 <br><br>
-
