@@ -2,7 +2,7 @@ class UserSkillsController < ApplicationController
 
   # GET /user_skills or /user_skills.json
   def index
-    @user_skills = current_user.user_skills
+    @user_skills = current_user.user_skills.order(created_at: :desc)
   end
 
   # POST /user_skills or /user_skills.json

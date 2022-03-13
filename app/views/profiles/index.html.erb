@@ -1,6 +1,11 @@
 
 <%= render 'searches/form' %>
 
+<% user = User.find(1) %>
+<%= form_for :user, url: search_profile_path(user), method: :post do |f|%>
+  <%= f.submit %>
+<%end%>
+
 <div id="users">
   <% @users.each do |user| %>
     <%= render "profile_card", user: user %>
