@@ -1,6 +1,5 @@
-
 <%= form_with url: test_profiles_path, method: :post do |form|%>
-  <div class="input-group mb-3">
+  <div class="mb-3">
     <%= form.collection_select :skill_id, Skill.all, :id, :title, {},
     { class: "form-select" , onchange: 'this.form.requestSubmit()'} %>
   </div>
